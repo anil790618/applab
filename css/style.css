@@ -1,0 +1,25 @@
+.nav-link {
+    padding: 0 20px !important;
+} 
+
+body {
+    background-color: #fdfdfe; 
+
+}
+:root{
+    --txtcolor: #242f51;
+    --grey:#616368;
+    --red:#f55767;
+    --blue:#5b8aff;
+    --green:#5aa876;
+}
+
+
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: 800 !important;
+    color: var(--txtcolor);
+}
+ p{
+    color: var(--grey);
+ }

@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> AppLab | Bootstrap and vuejs website template </title>
+    <link rel="shortcut icon" href="images/AppLab.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/mediaQuery.css"> -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- icon cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Option 1: Include in HTML -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --txtcolor: #242f51;
+            --grey: #616368;
+            --red: #f55767;
+            --redR: rgba(214, 110, 120, 0.5);
+            --blue: #5b8aff;
+            --green: #5aa876;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .herosection {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .herosection::after {
+            content: url(images/bannerbottom.png);
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            z-index: -1;
+        }
+
+        #navbar {
+            background-color: white;
+            position: fixed;
+            /* Make it stick/fixed */
+            top: -50px;
+            /* Hide the navbar 50 px outside of the top view */
+            width: 100%;
+            /* Full width */
+            transition: top 0.3s;
+            /* Transition effect when sliding down (and up) */
+            z-index: 999;
+        }
+    </style>
+</head>
+
+<body style="overflow-x: hidden;">
+    <nav class="navbar navbar-expand-lg  " id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="images/AppLab.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Key Features</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing </a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonial"> Testimonial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq"> FAQ</a>
+                    </li>
+
+                </ul>
+                <!-- <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+                <button class="btn  " onclick="document.location='#home'"
+                    style="background-color:rgb(36,47,81) ; color: white;">Try For Free</button>
+                <!-- </form> -->
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg  ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="images/AppLab.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Key Features</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing </a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonial"> Testimonial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq"> FAQ</a>
+                    </li>
+
+                </ul>
+                <!-- <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+                <button class="btn  " onclick="document.location='#home'"
+                    style="background-color:rgb(36,47,81) ; color: white;">Try For Free</button>
+                <!-- </form> -->
+            </div>
+        </div>
+    </nav>
+    <div class="herosection" style="overflow-x: hidden;">
+        <div class="container   my-4" id="home">
+            <div class="row" style="margin-top:50px ;">
+                <div class="col-12 col-sm-12 col-md-8 m-auto" data-aos="zoom-in-right" data-aos-easing="linear"
+                    data-aos-duration="600" data-aos-offset="0">
+                    <div class="bannertext my-3">
+                        <span style="background-color:rgba(252,174,97,0.6);padding:10px;border-radius: 20px;"><i
+                                class="fa-regular fa-square-check"
+                                style="padding:15px;background-color:rgba(36,47,81,0.5);border-radius: 20px;margin-left: -10px;color: white;"></i>#1Editirs
+                            Choice App of
+                            2020</span>
+                        <h1 class="display-2">Best app for your modern lifestyle
+                        </h1>
+                        <p>Increase productivity with a simple to-do app. app for managing your personal budegets</p>
+                        <button type="button" class="btn  " style="background-color:rgb(36,47,81);color: white;">Try for
+                            free</button>
+                        <button type="button" class="btn  " style="color:rgb(36,47,81);">Watch demo video</button>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 m-auto" data-aos="zoom-in-left" data-aos-easing="linear"
+                    data-aos-duration="600" data-aos-offset="0">
+                    <img src="images/mobile1.png" alt="" class="img-fluid d-block mx-auto bannerimage" width="80%">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container testomonialsection my-5" style="overflow-x: hidden;" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1000"
+        data-aos-offset="0">
+        <div class="row">
+            <div class="col-12 text-center">
+                <p>trusted by companies like</p>
+            </div>
+        </div>
+        <div class="owl-carousel owl-theme my-3">
+            <div class="item d-flex align-items-center" style="height:100px">
+                <img src="images/9.png" alt="" style="width:50%;" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="item d-flex align-items-center" style="height:100px">
+                <img src="images/Group 44.png" alt="" style="width:50%;" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="item d-flex align-items-center" style="height:100px">
+                <img src="images/Group 56.png" alt="" style="width:50%;" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="item d-flex align-items-center" style="height:100px">
+                <img src="images/Group 57.png" alt="" style="width:50%;" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="item d-flex align-items-center" style="height:100px">
+                <img src="images/Group 86.png" alt="" style="width:50%;" class="img-fluid d-block mx-auto">
+            </div>
+        </div>
+        <div id="features"></div>
+    </div>
+    <!-- Awesome app featues   -->
+    <div class="container" style="overflow-x: hidden;">
+        <div class="row  my-5">
+            <div class="col-12 col-sm-12 col-md-6" data-aos="fade-right" data-aos-easing="linear"
+                data-aos-duration="1000" data-aos-offset="0">
+                <img src="images/mobile2.png" alt="" class="img-fluid d-block mx-auto" style="width:60% ;">
+            </div>
+            <div class="col-12 col-sm-12 col-md-6" data-aos="fade-left" data-aos-easing="linear"
+                data-aos-duration="1000">
+                <div>
+                    <h2 class="   " style="color:rgb(36,47,81) ;"><b>Awesome apps features</b></h2>
+                    <p>increase productivity with a simple to-do app.app for managing your personal budgets.</p>
+                </div>
+                <div class="performance ">
+                    <div class="pcard d-flex align-items-center justify-content-center my-4">
+                        <div><i class="bi bi-speedometer"
+                                style="color: var(--red);font-size: 300%;padding: 20px;background-color: var(--redR);border-radius: 50%;margin: 10px;"></i>
+                        </div>
+                        <div>
+                            <h3 class="" style="color: var(--red);">Fast Performance</h3>
+                            <p>Get Your blood tests deliverd at home collect a sample form the news our blood tests.</p>
+                        </div>
+                    </div>
+                    <div class="pcard d-flex align-items-center justify-content-center my-4">
+                        <div><i class="bi bi-newspaper"
+                                style="color:var(--blue);font-size: 300%;padding: 20px;background-color: var(--redR);border-radius: 50%;margin: 10px;"></i>
+                        </div>
+                        <div>
+                            <h3 class="" style="color:var(--blue) ;">Prototype</h3>
+                            <p>Get Your blood tests deliverd at home collect a sample form the news our blood tests.</p>
+                        </div>
+                    </div>
+                    <div class="pcard d-flex align-items-center justify-content-center my-4">
+                        <div><i class="bi bi-vector-pen"
+                                style="font-size: 300%;padding: 20px;background-color: var(--redR);border-radius: 50%;margin: 10px;color: var(--green)"></i>
+                        </div>
+                        <div>
+                            <h3 class="" style="color: var(--green);">Vector Editing</h3>
+                            <p>Get Your blood tests deliverd at home collect a sample form the news our blood tests.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5" style="overflow-x: hidden;">
+        <div class="row">
+            <div class="col-12 col-md-6 m-auto my-2" data-aos="fade-right" data-aos-easing="linear"
+                data-aos-duration="1000" data-aos-offset="0">
+                <h2 class="display-6" style=" ">Smart jackpots that you may love this anytimes &
+                    anywhere</h2>
+            </div>
+            <div class="col-12 col-md-1 m-auto d-none d-md-block my-2" style="border-left:2px solid grey ;height:100px;"
+                data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1000">
+            </div>
+            <div class="col-12 col-md-5 m-auto my-2" data-aos="fade-left" data-aos-easing="linear"
+                data-aos-duration="1000">
+                <p>The rise of mobile devices transforms the way we consume informantion entriely and that wold;s maost
+                    elevant chanells shuch as facebook.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 m-auto" data-aos="fade-right" data-aos-easing="linear"
+                data-aos-duration="1000" data-aos-offset="0">
+                <img src="images/mobile3.png" alt="" width="100%">
+            </div>
+            <div class="col-sm-12 col-md-6 m-auto d-flex align-items-center" data-aos="fade-left"
+                data-aos-easing="linear" data-aos-duration="1000" data-aos-offset="0">
+                <div>
+                    <h2 class="display-6">
+                        Designed & built by the latest code integration
+                    </h2>
+                    <p>The rise of mobile devices transforms the way we consume informantion entriely and that wold;s
+                        maost
+                        elevant chanells shuch as facebook.</p>
+                    <button class="btn  " style="color:white ;background-color: rgb(36,47,81);">Learn more</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-7  m-auto text-center" data-aos="zoom-in" data-aos-easing="linear"
+                data-aos-duration="1000" data-aos-offset="0">
+                <h2 class="display-6">
+                    Why you should choose our app
+                </h2>
+                <p>The rise of mobile devices transforms the way we consume informantion entriely and that wold;s
+                    maost
+                    elevant chanells shuch as facebook.</p>
+            </div>
+        </div>
+        <div class="row my-5" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1000" data-aos-offset="0">
+            <div class="col-12 col-sm-6 col-md-4 m-auto text-center my-3">
+                <i class="bi bi-window-sidebar"
+                    style="color:var(--txtcolor);font-size: 300%;padding: 20px;background-color: var(--redR);border-radius: 50%;margin: 30px;"></i>
+                <h4 style="font-weight:400 !important" class="my-3">App Development</h4>
+                <p>Get Your blood tests delivered at home collect a saple form the news your blood test</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 m-auto text-center my-3">
+                <i class="bi bi-award"
+                    style="color:var(--txtcolor);font-size: 300%;padding: 20px;background-color: var(--redR);border-radius: 50%;margin: 30px;"></i>
+                <h4 style="font-weight:400 !important" class="my-3"> 10 Times Award</h4>
+                <p>Get Your blood tests delivered at home collect a saple form the news your blood test</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 m-auto text-center my-3">
+                <i class="bi bi-hourglass-bottom"
+                    style="color:var(--txtcolor);font-size: 300%;padding: 20px;background-color: var(--redR);border-radius: 50%;margin: 30px;"></i>
+                <h4 style="font-weight:400 !important" class="my-3">Cloud Storage</h4>
+                <p>Get Your blood tests delivered at home collect a saple form the news your blood test</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 m-auto text-center my-3">
+                <i class="bi bi-sliders"
+                    style="color:var(--txtcolor);font-size: 300%;padding: 20px;background-color: var(--redR);border-radius: 50%;margin: 30px;"></i>
+                <h4 style="font-weight:400 !important" class="my-3">Customization</h4>
+                <p>Get Your blood tests delivered at home collect a saple form the news your blood test</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 m-auto text-center my-3">
+                <i class="bi bi-file-earmark-easel"
+                    style="color:var(--txtcolor);font-size: 300%;padding: 20px;background-color: var(--redR);border-radius: 50%;margin: 30px;"></i>
+                <h4 style="font-weight:400 !important" class="my-3">UX planning</h4>
+                <p>Get Your blood tests delivered at home collect a saple form the news your blood test</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 m-auto text-center my-3">
+                <i class="bi bi-info-circle-fill"
+                    style="color:var(--txtcolor);font-size: 300%;padding: 20px;background-color: var(--redR);border-radius: 50%;margin: 30px;"></i>
+                <h4 style="font-weight:400 !important" class="my-3">Customer Support</h4>
+                <p>Get Your blood tests delivered at home collect a saple form the news your blood test</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 m-auto" data-aos="fade-right" data-aos-easing="linear"
+                data-aos-duration="1000" data-aos-offset="0">
+                <h2 class="display-6">
+                    Ultimate Features That we built
+                </h2>
+                <p>The rise of mobile devices transforms the way we consume information entirely.
+
+                </p>
+                <div class="container my-3">
+                    <div class="row py-5">
+                        <div class="col-sm-12 col-md-6">
+                            <i class="bi bi-window-sidebar"
+                                style="color:var(--txtcolor);font-size: 300%;padding: 20px;background-color: var(--redR);border-radius: 50%;margin: 30px;"></i>
+                            <h4 style="font-weight:400 !important" class="my-3">App Development</h4>
+                            <p>Get Your blood tests delivered at home collect a saple form the news your blood test</p>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <i class="bi bi-hourglass-bottom"
+                                style="color:var(--txtcolor);font-size: 300%;padding: 20px;background-color: var(--redR);border-radius: 50%;margin: 30px;"></i>
+                            <h4 style="font-weight:400 !important" class="my-3">Cloud Storage</h4>
+                            <p>Get Your blood tests delivered at home collect a saple form the news your blood test</p>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <i class="bi bi-file-earmark-easel"
+                                style="color:var(--txtcolor);font-size: 300%;padding: 20px;background-color: var(--redR);border-radius: 50%;margin: 30px;"></i>
+                            <h4 style="font-weight:400 !important" class="my-3">UX planning</h4>
+                            <p>Get Your blood tests delivered at home collect a saple form the news your blood test</p>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <i class="bi bi-info-circle-fill"
+                                style="color:var(--txtcolor);font-size: 300%;padding: 20px;background-color: var(--redR);border-radius: 50%;margin: 30px;"></i>
+                            <h4 style="font-weight:400 !important" class="my-3">Customer Support</h4>
+                            <p>Get Your blood tests delivered at home collect a saple form the news your blood test</p>
+                        </div>
+                        <div class="d-grid gap-2 d-md-block">
+                            <button class="btn " style="background-color:rgb(36,47,81); color:white;padding:10px 20px"
+                                type="button">See All</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 m-auto" data-aos="fade-left" data-aos-easing="linear"
+                data-aos-duration="1000" data-aos-offset="0">
+                <img src="images/mobile4.png" class="img-fluid" alt="">
+                <div id="testimonial"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 m-auto" data-aos="fade-right" data-aos-easing="linear"
+                data-aos-duration="1000" data-aos-offset="0">
+                <img src="images/mobile5.png" class="img-fluid" alt="">
+            </div>
+            <div class="col-sm-12 col-md-6 m-auto" data-aos="fade-left" data-aos-easing="linear"
+                data-aos-duration="1000">
+                <h2 class="display-6"> Meet Client Satisfaction by using product </h2>
+                <p>The rise of mobile devices transforms the way we consume information entirely. </p>
+                <div><i class="bi bi-star-fill text-warning px-1"></i><i
+                        class="bi bi-star-fill text-warning px-1"></i><i
+                        class="bi bi-star-fill text-warning px-1"></i><i
+                        class="bi bi-star-fill text-warning px-1"></i><i class="bi bi-star-fill text-warning px-1"></i>
+                </div>
+                <p style="color:var(--txtcolor) ;"><b>User friendly & Customizable</b></p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam fugit corporis nam minima porro.
+                    Cum in fugit nisi facere, at deserunt molestias, ducimus porro cupiditate repudiandae officia
+                    quaerat saepe aliquam magni incidunt? Ipsa harum animi modi consequatur architecto in facere, itaque
+                    quasi quos ea mollitia laboriosam, incidunt facilis illo vel.
+                </p>
+
+                <div class="d-flex">
+                    <div>
+                        <img src="images/person1.png" alt="">
+                    </div>
+                    <div class="d-flex align-items-center ">
+                        <div class="my-2 px-4">
+                            <p style="color:var(--txtcolor) ;" class="py-0 m-0"><b>Zoltan Nemeth</b></p>
+                            <p class="py-0 m-0">CEO of Pixler Lab</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="faq"></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-12 col-md-8 text-center m-auto" data-aos="zoom-in" data-aos-easing="linear"
+                data-aos-duration="1000" data-aos-offset="0">
+                <h2 class="display-6">Frequently asked questions </h2>
+                <p>The rise of mobile devices transforms the way we consume information entirely. Lorem ipsum dolor sit
+                    amet consectetur adipisicing elit. Aut maiores dicta, explicabo corporis earum nemo. Iusto eius
+                    voluptas, omnis earum delectus soluta non sequi maxime?
+                </p>
+            </div>
+        </div>
+        <div class="row" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1000" data-aos-offset="0">
+            <div class="col-12 col-md-8  m-auto">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <h6>How to contact with riders emergency?</h6>
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the first item's accordion body.</strong> It is shown by default, until
+                                the collapse plugin adds the appropriate classes that we use to style each element.
+                                These classes control the overall appearance, as well as the showing and hiding via CSS
+                                transitions. You can modify any of this with custom CSS or overriding our default
+                                variables. It's also worth noting that just about any HTML can go within the
+                                <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <h6>App installation failed. how to update system information?</h6>
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the second item's accordion body.</strong> It is hidden by default,
+                                until the collapse plugin adds the appropriate classes that we use to style each
+                                element. These classes control the overall appearance, as well as the showing and hiding
+                                via CSS transitions. You can modify any of this with custom CSS or overriding our
+                                default variables. It's also worth noting that just about any HTML can go within the
+                                <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <h6>Website response taking time, how to improve</h6>
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until
+                                the collapse plugin adds the appropriate classes that we use to style each element.
+                                These classes control the overall appearance, as well as the showing and hiding via CSS
+                                transitions. You can modify any of this with custom CSS or overriding our default
+                                variables. It's also worth noting that just about any HTML can go within the
+                                <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree1" aria-expanded="false" aria-controls="collapseThree">
+                                <h6>New update fixed all bug and issues</h6>
+                            </button>
+                        </h2>
+                        <div id="collapseThree1" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until
+                                the collapse plugin adds the appropriate classes that we use to style each element.
+                                These classes control the overall appearance, as well as the showing and hiding via CSS
+                                transitions. You can modify any of this with custom CSS or overriding our default
+                                variables. It's also worth noting that just about any HTML can go within the
+                                <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree2" aria-expanded="false" aria-controls="collapseThree">
+                                <h6>How to contact with riders emergency?</h6>
+                            </button>
+                        </h2>
+                        <div id="collapseThree2" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until
+                                the collapse plugin adds the appropriate classes that we use to style each element.
+                                These classes control the overall appearance, as well as the showing and hiding via CSS
+                                transitions. You can modify any of this with custom CSS or overriding our default
+                                variables. It's also worth noting that just about any HTML can go within the
+                                <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 m-auto" data-aos="fade-right" data-aos-easing="linear"
+                data-aos-duration="1000" data-aos-offset="0">
+                <h2 class="display-6"> Download our App now!</h2>
+                <p>The rise of mobile devices transforms the way we consume information entirely. </p>
+                <div>
+                    <img src="images/apple.png" alt="" class="img-fluid">
+                    <img src="images/playstore.png" alt="" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 m-auto" data-aos="fade-left" data-aos-easing="linear"
+                data-aos-duration="1000" data-aos-offset="0">
+                <img src="images/mobile6.png" class="img-fluid" alt="">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer p-5" style="background-color:var(--txtcolor) ;">
+        <img src="images/AppLab.png" class="img-fluid d-block mx-auto" alt="" data-aos="zoom-in"
+            data-aos-easing="linear" data-aos-duration="1000">
+        <div class="d-flex justify-content-center text-white my-4" data-aos="zoom-in" data-aos-easing="linear"
+            data-aos-duration="1000" data-aos-offset="0">
+            <p class="px-2 text-white">Home</p>
+            <p class="px-2 text-white">KeyFeatures</p>
+            <p class="px-2 text-white">Pricing</p>
+            <p class="px-2 text-white">Testiminial</p>
+            <p class="px-2 text-white">faq</p>
+        </div>
+        <div class="d-flex justify-content-center text-white my-4" data-aos="zoom-in" data-aos-easing="linear"
+            data-aos-duration="1000" data-aos-offset="0">
+            Copyright All rights reserved by web
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <!-- textomonials  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        var owl = $('.owl-carousel');
+        owl.owlCarousel({
+            items: 4,
+            loop: true,
+            margin: 10,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true
+        });
+        $('.play').on('click', function () {
+            owl.trigger('play.owl.autoplay', [5000])
+        })
+        $('.stop').on('click', function () {
+            owl.trigger('stop.owl.autoplay')
+        })
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("navbar").style.top = "0";
+            } else {
+                document.getElementById("navbar").style.top = "-50px";
+            }
+        }
+    </script>
+</body>
+
+</html>
